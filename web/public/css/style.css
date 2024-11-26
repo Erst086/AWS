@@ -1,0 +1,235 @@
+body{
+    background: radial-gradient(circle, rgba(31,37,29,1) 9%, rgba(0,0,0,1) 60%); 
+}
+h5{
+    text-align: center;
+}
+h1{
+    color: white;
+    text-align: center;
+}
+h4{
+    color: black;
+}
+form{
+    background-color: #fff;
+    border-radius: 10%;
+    border-color: black;
+    text-align: center;
+}
+.f{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+}
+img{
+    display: block;
+    margin: auto; 
+    height: 100vh;     
+}
+
+.btn.btn-primary{
+    display: block;
+    margin: auto;     
+}
+.nin{
+    background: radial-gradient(circle, rgba(209,0,0,1) 9%, rgba(138,2,2,1) 60%); 
+}
+.x{
+    background: rgb(37,209,0);
+    background: radial-gradient(circle, rgba(37,209,0,1) 9%, rgba(2,138,26,1) 60%); 
+}
+.p{
+    background: radial-gradient(circle, rgba(8,17,117,1) 0%, rgba(0,0,0,1) 100%);
+}
+.c{
+    background: radial-gradient(circle, rgba(191,218,5,1) 16%, rgba(105,103,20,1) 67%); 
+}
+@media (min-width: 750px) {
+    header {
+        text-align: left;
+    }
+}
+.borrar-curso {
+    background-color: red;
+    border-radius: 50%;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+ul {
+    list-style: none;
+}
+#hero {
+    background-image:url(../img/fondo.jpg);
+    height: 400px;
+    background-size: cover;
+}
+#encabezado {
+    margin: 30px 0;
+}
+.submenu {
+    position: relative;
+}
+
+.submenu #carrito{
+    display: none;
+}
+.submenu:hover #carrito{
+    display: block;
+    position: absolute;
+    right:0;
+
+    top:100%;
+    z-index: 1;
+    background-color: #fff;
+    padding: 20px;
+    min-height: 400px;
+    min-width: 300px;
+}
+.vacio {
+    padding: 10px;
+    background-color: crimson;
+    text-align: center;
+    border-radius: 10px;
+    color: white;
+}
+.contenido-hero {
+    margin-top: 80px;
+    color: white;
+}
+.contenido-hero form {
+    position: relative;
+    margin-bottom: 0;
+}
+.contenido-hero form #buscador {
+    height: 50px;
+    margin-bottom: 0;
+}
+.contenido-hero form .submit-buscador {
+    position: absolute;
+    right:0;
+    top:0;
+    height: 100%;
+    padding: 0;
+    display: block;
+    text-indent: -9999px;
+    width: 50px;
+    background-image: url(../img/lupa.png);
+    background-position: right center;
+    background-repeat: no-repeat;
+    border:none;
+}
+
+
+.barra {
+    padding: 20px 0;
+    background: #741d51; /* Old browsers */
+    background: -moz-linear-gradient(left, #741d51 0%, #e44e52 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #741d51 0%,#e44e52 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #741d51 0%,#e44e52 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#741d51', endColorstr='#e44e52',GradientType=1 ); /* IE6-9 */
+}
+
+.barra p {
+    margin:0;
+    color: white;
+}
+.icono {
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 60px;
+    background-size: 30px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+@media (min-width: 750px) {
+    .icono {
+        margin-bottom:0;
+    }
+}
+
+
+
+.agregar-carrito {
+    margin:10px 0;
+}
+
+@media (min-width: 550px) {
+    .card {
+        text-align: center;
+    }
+}
+.info-card  {
+    padding: 10px 20px;
+}
+
+.info-card p, 
+.card h4 {
+    margin-bottom: 5px;
+}
+.info-card .precio {
+    text-decoration: line-through;
+    font-size: 18px;
+    margin-top: 10px;
+}
+.info-card .precio span {
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.card-title {
+    min-height: 3rem; /* Ajusta según el texto promedio */
+    overflow: hidden; /* Evita que textos largos desborden */
+    text-overflow: ellipsis; /* Agrega puntos suspensivos si es necesario */
+    white-space: nowrap; /* Mantén el texto en una sola línea */
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribuye el contenido equitativamente */
+    height: 100%; /* Asegura que ocupe todo el espacio disponible */
+}
+
+.card-text {
+    font-size: 1.2rem; /* Ajusta el tamaño del precio si es necesario */
+    font-weight: bold;
+}
+
+.btn-primary {
+    align-self: center; /* Centra el botón en la tarjeta */
+    margin-top: auto; /* Empuja el botón hacia la parte inferior */
+}
+form {
+    position: relative; /* Necesario para posicionar elementos relativos al formulario */
+}
+.btn-regresar {
+    position: absolute;
+    top: 10px; /* Ajusta según el margen deseado */
+    left: 10px; /* Ajusta según el margen deseado */
+    padding: 5px 10px; /* Opcional: Ajusta el tamaño del botón */
+    font-size: 0.9rem; /* Opcional: Ajusta el tamaño del texto */
+    text-align: center;
+    background-color: #007bff; /* Color del botón */
+    color: #fff;
+    border: none;
+    border-radius: 5px; /* Bordes redondeados */
+    text-decoration: none;
+}
+
+.btn-regresar:hover {
+    background-color: #0056b3; /* Efecto al pasar el mouse */
+}
+.carrito-img {
+    width: 50px;  /* Ajusta el ancho */
+    height: 50px; /* Ajusta la altura */
+    object-fit: cover; /* Ajusta cómo se muestra la imagen para evitar distorsión */
+    border-radius: 5px; /* (Opcional) Bordes redondeados */
+}
+

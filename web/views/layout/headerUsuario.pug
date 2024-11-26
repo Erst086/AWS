@@ -1,0 +1,49 @@
+script(src='/js/carrito.js')
+header.navbar.bg-body-tertiary
+  .container
+    a.navbar-brand.letra.ms-5(href="/user/") GameStart
+    a(href='/xbox')
+      img.img-fluid.rounded(src='/img/xbox.jpg' width='40' height='40')
+    a(href='/play')
+      img.img-fluid.rounded(src='/img/ps5.jpg' alt='Imagen de una PS5' width='40' height='40')
+    a(href='/nin')
+      img.img-fluid.rounded(src='/img/n.jpg' alt='Bootstrap' width='60' heigt='80')
+    a(href='/con')
+      img.img-fluid.rounded(src='/img/mando.jpg' alt='Bootstrap' width='40' heigt='40')
+    a.form.d-flex(role='search')
+    .two.columns
+      ul
+        li.submenu
+          img.img-fluid.rounded(src='/img/carrito.jpg' alt='Imagen de una PS5' width='40' height='40')
+          #carrito
+            table#lista-carrito.u-full-width
+              thead
+                tr
+                  th Imagen
+                  th Nombre
+                  th Precio
+                  th Cantidad
+                  th
+              tbody
+                each producto in carrito
+                  tr
+                    td
+                      img(class="carrito-img" src=`/img/caratulas/${producto.id}.jpg` alt=`Imagen de ${producto.nombre}` width="50")
+                    td= producto.nombre
+                    td= `$${producto.precio.toFixed(2)}`
+                    td= producto.cantidad
+                    td
+                      form(method="POST" action="/user/eliminarProducto")
+                        input(type="hidden" name="_csrf" value=csrf)
+                        input(type="hidden" name="id" value=producto.id)
+                        button.btn.btn-danger(type="submit") X
+              a#vaciar-carrito.btn.btn-primary(href='/user/vaciarCarrito') Vaciar Carrito
+              br
+              a#Comprar.btn.btn-primary(href='/user/finalizarCompra') Comprar
+
+
+    .two.columns   
+      input.form-control(type='search' placeholder='Buscar' aria-label='Search')
+    .two.columns 
+        h4 Bienvenido #{usuario.nombre}
+        a.btn.btn-outline-success.me-2(href="/logOut") Salir

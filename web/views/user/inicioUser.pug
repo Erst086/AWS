@@ -1,0 +1,55 @@
+doctype html
+html(lang="es")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title INICIO
+        link(rel="stylesheet", href="/css/bootstrap.css")
+        link(rel="stylesheet", href="/css/style.css")
+        script(src="/js/bootstrap.bundle.js")
+        script(src="/js/pooper.min.js")
+        script(src="codigo.js")
+    body(class='p')
+    include ../layout/headerUsuario.pug
+.container
+  .row.justify-content-center.p-5
+    .col-md-4.d-flex.justify-content-center
+      .card(style='width: 18rem; height: 26rem;')
+        img.card-img-top(src='/img/img.jpg' alt='...' style='height: 20rem; object-fit: cover;')
+        .card-body
+          h5.card-title Explora
+          p.card-text Encuentra varios productos relacionados al mundo del gaming y de la mejor calidad.
+          a.btn.btn-primary(href='/xbox') Busca nuestros títulos
+    .col-md-4.d-flex.justify-content-center
+      .card(style='width: 18rem; height: 26rem;')
+        img.card-img-top(src='/img/img2.jpg' alt='...' style='height: 20rem; object-fit: cover;')
+        .card-body
+          h5.card-title Juega
+          p.card-text Prueba nuestro catálogo de videojuegos para que vivas grandes experiencias.
+          a.btn.btn-primary(href='/con') Busca tu consola
+
+    h1 
+    h1
+    h1
+    .row(style='gap: 2rem; padding: 20px;')
+        h1 Checa nuestros productos
+        h1    
+        each pro in produc
+            .col
+                .card(style='width: 14rem; height: 24rem;')
+                    h1
+                    img.card-img-top(src=`/img/caratulas/${pro.id_producto}.jpg` alt='...' style='width: 10rem; height: 12rem;')
+                    .card-body
+                        h5.card-title=`${pro.nombre}`
+                        p.card-text=`${pro.precio.toFixed(2)}`
+                        form(method="POST" action="/user/agregarCarrito")
+                          input(type="hidden" name="_csrf" value=csrf)
+                          input(type="hidden" name="id" value=`${pro.id_producto}`)
+                          input(type="hidden" name="nombre" value=`${pro.nombre}`)
+                          input(type="hidden" name="precio" value=`${pro.precio}`)
+                          input(type="hidden" name="img" value=`${pro.id_producto}.jpg`)
+                          button.btn.btn-primary(type="submit") Añadir al carrito
+
+  
+
+
